@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://kit.fontawesome.com/91ae1482eb.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/91ae1482eb.js" crossorigin="anonymous"></script>
+	<title>Portfolio</title>
+</head>
+
+<body>
+<div onmouseover="this.children[0].src='static/images/web_dev2.jpg'" onmouseout="this.children[0].src='static/images/web_dev.jpg'" id="hover">
+  <img src="static/images/web_dev.jpg">
+  <h1 id="main">Hi, I'm<br>Gaurav Taxali!👋</h1>
+  <p id="typing-effect"></p>
+  <script>
+	var messages = [
+	  "cyber security_",
+	  "ethical hacker_",
+	  "front end developer_",
+	  "programmer_",
+	  "red teamer_",
+	  "blue teamer_"
+	];
+
+	var currentMessageIndex = 0;
+	var currentMessage = messages[currentMessageIndex];
+	var i = 0;
+	var speed = 50;
+	var typingEffect = document.getElementById("typing-effect");
+
+	function typeWriter() {
+	  if (i < currentMessage.length) {
+		typingEffect.textContent += currentMessage.charAt(i);
+		i++;
+		setTimeout(typeWriter, speed);
+	  } else {
+		setTimeout(deleteMessage, 1000);
+	  }
+	}
+
+	function deleteMessage() {
+	  var length = currentMessage.length;
+	  var timer = setInterval(function() {
+		if (i > 0) {
+		  typingEffect.textContent = typingEffect.textContent.slice(0, -1);
+		  i--;
+		} else {
+		  clearInterval(timer);
+		  currentMessageIndex++;
+		  if (currentMessageIndex > messages.length - 1) {
+			currentMessageIndex = 0;
+		  }
+		  currentMessage = messages[currentMessageIndex];
+		  setTimeout(typeWriter, 500);
+		}
+	  }, 50);
+	}
+
+	typeWriter();
+  </script>
+</div>
+
+<div id="about">
+	<h1>ABOUT ME</h1>
+	<ul>
+		<li>High School from Bal Bharati Public School in Computer Science.</li>
+		<li>Pursuing B.Tech in Electronics and Communication Engineering from Bharati Vidyapeeth University.</li>
+		<li>Interests in Cybersecurity, Ethical Hacking, Cryptography, UI Design and Front End Dev.</li>
+		<li>Holding a 5 month internship experience in DreamBig IT Pvt. Ltd. as Cyber Security Content Creator and Manager.</li>
+		<li>Actively seeking further internships in Cybersecurity and Web Development to further scale up my skills and develop valuable experience.</li>
+	</ul>
+</div>
+
+<div id="skills">
+	<h1>SKILLS</h1>
+	<div class="flexbox">
+		<div class="text-container">
+			<h2>MAJOR SKILLS</h2>
+			<p>CYBERSECURITY<br>ETHICAL HACKING<br>LINUX<br>PYTHON<br>WIRESHARK<br>CRYPTOGRAPHY<br>MYSQL<br>SQLITE<br>GERMAN<br>FRONT END DEV<br>OSINT</p>
+		</div>
+		<div class="text-container">
+			<h2>LANGUAGES</h2>
+			<p>PYTHON<br>C<br>C++<br>JAVASCRIPT<br>CSS<br>HTML<br>BASH SCRIPT<br>SQL<br>POWERSHELL<br>ENGLISH<br>GERMAN<br></p>
+		</div>
+		<div class="text-container">
+			<h2>MINOR SKILLS</h2>
+			<p>WEB APP EXPLOITATION<br>MEMORY FORENSICS<br>REVERSE ENGINEERING<br>WINDOWS FORENSICS<br>STEGANOGRAPHY<br>ACTIVE DIRECTORY<br>BUFFER OVERFLOWS<br>DSA<br>PHP<br>SPLUNK<br>SIEM</p>
+		</div>
+	</div>
+</div>
+
+<div id="projects">
+	<h1>PROJECTS</h1>
+	<button>
+		<a href="https://github.com/gaurav16-byte/KeyPass">
+			<h3>KeyPass</h3>
+			<p>Secure Password manager that uses encryption to store all your credentials</p>
+		</a>
+	</button>
+	<button>
+		<a href="https://github.com/gaurav16-byte/Wordlist">
+			<h3>Wordlist</h3>
+			<p>Creates wordlist for password bruteforcing using permutation and combination, uses less storage.</p>
+		</a>
+	</button>
+	<br>
+	<button>
+		<a href="https://github.com/gaurav16-byte/Stupid_Encoding_Algorithm">
+			<h3>Encoding Algorithm</h3>
+			<p>Uses a encoding algorithm to develop random gibberish, can be used to hide less important information.</p>
+		</a>
+	</button>
+	<button>
+		<a href="https://github.com/gaurav16-byte/Stupid_Encoding_Algorithm">
+			<h3>BASE-64 C++</h3>
+			<p>Base-64 encoding algorithm using C++ programming language.</p>
+		</a>
+	</button>
+	<br>
+	<button>
+		<a href="https://github.com/gaurav16-byte/IP-Scanner">
+			<h3>IP Scanner</h3>
+			<p>To find the active IP addresses on your network, python3 used.</p>
+		</a>
+	</button>
+	<button>
+		<a href="https://github.com/gaurav16-byte/password-generator">
+			<h3>Password Generator</h3>
+			<p>Generate a random password based on your desired complexity</p>
+		</a>
+	</button>
+</div>
+
+<div id="cert">
+	<h1>CERTIFICATES</h1>
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SMMT56A84R.png" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-QB1VSOCRRL.png" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-ZNZJ1ATLTP.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-IAXAKSE4MA.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-BR1HIBBTI6.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NUNMSFQTL0.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-UJWPITDIGA.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-DDDNOXQMQN.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="static/images/dreambig.jpg" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="static/images/grp.jpg" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://media.licdn.com/dms/image/C4D22AQF9PpbB3pG3Tw/feedshare-shrink_2048_1536/0/1652265625290?e=1683158400&v=beta&t=1JTxlSzMmIf1iXohxGN_N7BkG7HmM7ReP060FnxSCIE" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://media.licdn.com/dms/image/C4D22AQEVSUpe2_7PRA/feedshare-shrink_2048_1536/0/1649014311379?e=1683158400&v=beta&t=WYxHowfsJdNQGaBYryHBnO4yRSsRXoUQmxpB3DySzBg" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://media.licdn.com/dms/image/C4D22AQE2tT4PMYgGEg/feedshare-shrink_2048_1536/0/1649014311394?e=1683158400&v=beta&t=IZG3O-54oMi-2AjIndcVDq8XSsEw9Ri9-8xcB-AKTNM" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~RJT99V27PZVC/CERTIFICATE_LANDING_PAGE~RJT99V27PZVC.jpeg" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~WDCDBPYHH63Q/CERTIFICATE_LANDING_PAGE~WDCDBPYHH63Q.jpeg" style="width:100%">
+		</div>
+
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+	</div>
+	
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		}
+	</script>
+</div>
+
+<footer>
+	<h1>CONNECT WITH ME!</h1>
+	<div class="refer">
+		<a href="https://open.spotify.com/user/31rruxxnrkf7lar67whhbvjrg2pm?si=15b3a9912f924630">
+			<i class="fa-brands fa-spotify"></i>
+		</a>
+		<a href="https://www.instagram.com/sim0n_ril3y/">
+			<i class="fa-brands fa-instagram"></i>
+		</a>
+		<a href="https://github.com/gaurav16-byte">
+			<i class="fa-brands fa-github"></i>
+		</a>
+		<a href="https://discordapp.com/users/511721302445522955">
+			<i class="fa-brands fa-discord"></i>
+		</a>
+		<a href="https://www.reddit.com/user/ERr0rhm3">
+			<i class="fa-brands fa-reddit"></i>
+		</a>
+		<a href="https://www.buymeacoffee.com/ERr0rhm3">
+			<i class="bi bi-cup-hot-fill"></i>
+		</a>
+	</div>
+</footer>
+</body>
+
+</html>
