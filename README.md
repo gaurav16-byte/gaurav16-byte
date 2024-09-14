@@ -42,3 +42,5 @@
   <img alt="languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaurav16-byte&layout=compact&hide_border=true&theme=radical" />
 </p>
 
+[![gaurav16-byte's GitHub | Languages Over Time](https://stats.quira.sh/gaurav16-byte/languages-over-time?theme=dark)](https://quira.sh?utm_source=widgets&utm_campaign=gaurav16-byte)
+
