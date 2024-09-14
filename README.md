@@ -1,5 +1,3 @@
-![Untitled](https://user-images.githubusercontent.com/61114467/228471935-323f4cc6-4631-4eda-aad1-82835462d7e9.png)
-
 # Hey there, I'm Gaurav!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurav-taxali-750a2321a/)
